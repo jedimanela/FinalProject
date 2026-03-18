@@ -2,3 +2,174 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+body {
+    background-color: antiquewhite;
+    display:grid;
+    grid-template-columns: 1fr repeat(6, minmax(auto, 10em)) 1fr;
+    grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto);
+
+    transition: opacity 0.5s ease;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+/*header elements*/
+header {
+    grid-column: span 8;
+
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    background-color: black;
+    color:white;
+
+    position:sticky;
+    top:0px;
+    z-index:2;
+}
+
+.oscarTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#oscar {
+   height:100px;
+}
+
+#homeButton {
+    background-color: black;
+    color:white;
+    align-items: center;
+    bottom:50px;
+    text-decoration: none;
+}
+
+.navMenu {
+    background-color: black;
+    color:white;
+    justify-content: center;
+    align-items:stretch;
+    margin: auto;
+    gap: 50px;
+    
+
+    display:flex;
+}
+
+.navMenu div {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.navMenu button {
+    background-color: goldenrod;
+    height: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    border:0;
+}
+
+.navMenu button:hover {
+    background-color:darkviolet;
+    color:white;
+}
+
+#star-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    color: gold;
+    font-size: 20px;
+    animation: fall 1s ease-out forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(200px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* main content */
+.main-content {
+    grid-column: 2/6;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+}
+
+p span {
+    font-weight: bolder;
+    font-size:xx-large;
+}
+
+.sidebar {
+    grid-column: 6/8;
+    margin: 20px;
+}
+
+.sidebar span {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.callout {
+    grid-column: 2/5;
+    grid-row: 3/4;
+}
+
+.callout:last-of-type {
+    grid-column: 5/8;
+}
+
+figure {
+  border: 1px #cccccc solid;
+  padding: 4px;
+  margin: auto;
+  width: 470px;
+  background-color:darkred;
+  color:white;
+}
+
+figure img {
+    height: auto;
+    width:100%;
+    object-fit: contain;
+}
+
+figcaption {
+  background-color: black;
+  color: white;
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+}
+
+/* footer */
+footer {
+    grid-column: span 8;
+    grid-row: 4/4;
+    background-color: black;
+    color: goldenrod;
+}
+
