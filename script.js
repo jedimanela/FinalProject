@@ -1,7 +1,8 @@
 function bestPicturePressed() {
     createStars();
 
-   document.body.classList.add("fade-out");
+    document.querySelectorAll('.content-wrapper')
+        .forEach(el => {el.classList.add('fade-out')});
 
     setTimeout(() => {
         window.location.href = "bestPicture.html";
@@ -11,7 +12,8 @@ function bestPicturePressed() {
 function redCarpetPressed() {
     createStars();
 
-    document.body.classList.add("fade-out");
+    document.querySelectorAll('.content-wrapper')
+        .forEach(el => {el.classList.add('fade-out')});
 
     setTimeout(() => {
         window.location.href = "bestLooks.html";
@@ -20,8 +22,9 @@ function redCarpetPressed() {
 
 function winnersPressed() {
     createStars();
-    
-    document.body.classList.add("fade-out");
+
+    document.querySelectorAll('.content-wrapper')
+        .forEach(el => {el.classList.add('fade-out')});
 
     setTimeout(() => {
         window.location.href = "winners.html";

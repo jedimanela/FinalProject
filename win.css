@@ -109,7 +109,15 @@ header {
 }
 
 /* main content */
-.main-content {
+.content-wrapper{
+    transition: opacity 0.5s ease;
+}
+
+.content-wrapper.fade-out {
+    opacity: 0;
+}
+
+#main-content {
     grid-column: 2/6;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: large;
