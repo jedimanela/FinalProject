@@ -113,8 +113,13 @@ header {
 
 #main-content {
     grid-column: 2/6;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Georgia, serif;
     font-size: large;
+}
+
+#main-content h1{
+    color: goldenrod;
+    text-shadow: black 1px 1px;
 }
 
 p span {
@@ -125,10 +130,23 @@ p span {
 #sidebar {
     grid-column: 6/8;
     margin: 20px;
+    font-family: Georgia, serif;
 }
 
 #sidebar span {
     font-weight: bold;
+}
+
+#sidebar h2 {
+    font-size: 2em;
+    letter-spacing: 2px;
+    color: goldenrod;
+    text-shadow: black 1px 1px;
+    border-bottom: 1px solid #ccc;
+}
+
+#sidebar h3 {
+    color: goldenrod;
 }
 
 a {

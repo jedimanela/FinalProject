@@ -123,6 +123,17 @@ figure {
   width: 600px;
 }
 
+figure h2{
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: goldenrod;
+    text-transform: uppercase;
+    margin: 5px;
+    padding-top: 4px;
+    font-family: Georgia, serif;
+    text-shadow: black 1px 1px;
+}
+
 .figure-header {
     display: flex;
     justify-content: space-between;
@@ -130,11 +141,22 @@ figure {
 }
 
 #winner {
-    background-color: goldenrod;
+    border-left: 4px solid goldenrod;
+    background-color: #fff8e7;
+    padding-left: 16px;
+    font-family: Georgia, serif;
+}
+
+.badge {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: goldenrod;
+    display: block;
+    margin-bottom: 4px;
 }
 
 #winner a{
-    color:black;
     text-decoration: none;
 }
 
