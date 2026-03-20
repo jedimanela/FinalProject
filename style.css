@@ -6,13 +6,13 @@ html, body {
 body {
     background-color: antiquewhite;
     display:grid;
-    grid-template-columns: 1fr repeat(6, minmax(auto, 10em)) 1fr;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto);
 }
 
 /*header elements*/
 header {
-    grid-column: span 8;
+    grid-column: span 6;
 
     justify-content: space-between;
     align-items: center;
@@ -112,9 +112,10 @@ header {
 }
 
 #main-content {
-    grid-column: 2/6;
+    grid-column: 1/5;
     font-family: Georgia, serif;
     font-size: large;
+    margin-left: 80px;
 }
 
 #main-content h1{
@@ -128,7 +129,7 @@ p span {
 }
 
 #sidebar {
-    grid-column: 6/8;
+    grid-column: 5/7;
     margin: 20px;
     font-family: Georgia, serif;
 }
@@ -153,13 +154,16 @@ a {
     text-decoration: none;
 }
 
-.callout {
-    grid-column: 2/5;
-    grid-row: 3/4;
+.callout-container {
+    grid-column: span 6;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 0;
 }
 
-.callout:last-of-type {
-    grid-column: 5/8;
+.callout {
+    flex: 0 0 auto;
 }
 
 figure {
@@ -185,7 +189,7 @@ figcaption {
 
 /* footer */
 footer {
-    grid-column: span 8;
+    grid-column: span 6;
     grid-row: 4/4;
     background-color: black;
     color: goldenrod;
