@@ -26,8 +26,139 @@
       </div>
     </div>
   </header>
+  <div class="pictures content-wrapper">
+      <img src="./pictures/redcarpet/redCarpetCover.avif" alt="actresses on the red carpet at the Oscars 2026">
+      <img src="./pictures/redcarpet/redCarpetMen.jpg" alt="actors on the red carpet at the Oscars 2026">
+      <h1>Red Carpet Fashion</h1>
+  </div>
   <div id="main-content" class="content-wrapper">
-      This is main
+     <h2>Vote for Best Dressed</h2>
+
+    <section class="poll-section">
+      <h3>Best Dressed Woman</h3>
+      <div class="poll-grid">
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/women/azion.jpg" alt="Odessa A'zion">
+          <p>Odessa A'zion</p>
+          <button class="vote-btn" onclick="vote('women', 'Odessa Azion', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/women/buckley.jpg" alt="Jessie Buckley">
+          <p>Jessie Buckley</p>
+          <button class="vote-btn" onclick="vote('women', 'Jessie Buckley', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/women/byrne.jpg" alt="Rose Byrne">
+          <p>Rose Byrne</p>
+          <button class="vote-btn" onclick="vote('women', 'Rose Byrne', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/women/ejae.jpg" alt="Ejae">
+          <p>Ejae</p>
+          <button class="vote-btn" onclick="vote('women', 'Ejae', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/women/fanning.jpg" alt="Elle Fanning">
+          <p>Elle Fanning</p>
+          <button class="vote-btn" onclick="vote('women', 'Elle Fanning', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/women/kidman.jpg" alt="Nicole Kidman">
+          <p>Nicole Kidman</p>
+          <button class="vote-btn" onclick="vote('women', 'Nicole Kidman', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/women/moore.jpg" alt="Demi Moore">
+          <p>Demi Moore</p>
+          <button class="vote-btn" onclick="vote('women', 'Demi Moore', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/women/taylor.jpg" alt="Teyana Taylor">
+          <p>Teyana Taylor</p>
+          <button class="vote-btn" onclick="vote('women', 'Teyana Taylor', this)">Vote</button>
+        </div>
+
+      </div>
+      <div class="results" id="women-results"></div>
+    </section>
+
+    <section class="poll-section">
+      <h3>Best Dressed Man</h3>
+      <div class="poll-grid">
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/men/chalamet.jpg" alt="Timothee Chalamet">
+          <p>Timothee Chalamet</p>
+          <button class="vote-btn" onclick="vote('men', 'Timothee Chalamet', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/men/elordi.jpg" alt="Jacob Elordi">
+          <p>Jacob Elordi</p>
+          <button class="vote-btn" onclick="vote('men', 'Jacob Elordi', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/men/idris.jpg" alt="Damson Idris">
+          <p>Damson Idris</p>
+          <button class="vote-btn" onclick="vote('men', 'Damson Idris', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/men/jordan.jpg" alt="Michael B. Jordan">
+          <p>Michael B. Jordan</p>
+          <button class="vote-btn" onclick="vote('men', 'Michael B. Jordan', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/men/mescal.jpg" alt="Paul Mescal">
+          <p>Paul Mescal</p>
+          <button class="vote-btn" onclick="vote('men', 'Paul Mescal', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/men/pascal.jpg" alt="Pedro Pascal">
+          <p>Pedro Pascal</p>
+          <button class="vote-btn" onclick="vote('men', 'Pedro Pascal', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/men/pullman.jpg" alt="Lewis Pullman">
+          <p>Lewis Pullman</p>
+          <button class="vote-btn" onclick="vote('men', 'Lewis Pullman', this)">Vote</button>
+        </div>
+
+        <div class="poll-card">
+          <img src="./pictures/redcarpet/men/shaboozey.jpg" alt="Shaboozey">
+          <p>Shaboozey</p>
+          <button class="vote-btn" onclick="vote('men', 'Shaboozey', this)">Vote</button>
+        </div>
+
+      </div>
+      <div class="results" id="men-results"></div>
+
+    </section>
+    <div class="write-in">
+      <h4>Write In Your Own Pick</h4>
+      <form onsubmit="submitWriteIn(event)">
+        <input type="text" name="name" placeholder="Celebrity name" required>
+        <select name="category" required>
+          <option value="" disabled selected>Select a category</option>
+          <option value="women">Best Dressed Woman</option>
+          <option value="men">Best Dressed Man</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="writein-result"></div>
+    </div>
   </div>
   <footer class="content-wrapper">
     <p>&copy; 2026 Oscars Fan Page | Not affiliated with the Academy</p>

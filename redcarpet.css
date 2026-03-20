@@ -108,6 +108,36 @@ header {
     }
 }
 
+.pictures {
+    grid-column: span 8;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    position: relative;
+}
+
+.pictures img {
+    width: 100%;
+    height: 500px;
+    object-fit:contain;
+    display: block;
+}
+
+.pictures h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin: 0;
+    /* text formating */
+    color: goldenrod;
+    text-align: center;
+    font-family: Georgia, serif;
+    text-shadow: 1px 1px black;
+    font-size: 3rem;
+}
+
 /* main content */
 .content-wrapper{
     transition: opacity 0.5s ease;
@@ -117,9 +147,174 @@ header {
     opacity: 0;
 }
 #main-content {
-    grid-column: 2/6;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: large;
+    grid-column: 1 / -1;
+    padding: 0 40px;
+    font-family: Georgia, serif;
+}
+
+#main-content h2{
+    color: goldenrod;
+    text-shadow: 1px 1px black;
+    letter-spacing: 2px;
+}
+
+.poll-section {
+    margin: 40px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 40px;
+}
+
+.poll-section h3{
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: goldenrod;
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 4px;
+    font-family: Georgia, serif;
+}
+
+.poll-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.poll-card {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 12px;
+    background: white;
+}
+
+.poll-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.poll-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.vote-btn {
+    background-color: goldenrod;
+    border: none;
+    padding: 8px 24px;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.vote-btn:hover {
+    background-color: darkviolet;
+    color: white;
+}
+
+.vote-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.results {
+    margin-top: 16px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: goldenrod;
+    text-transform: uppercase;
+}
+
+.result-bar-container {
+    margin: 8px 0;
+}
+
+.result-bar-container p {
+    margin: 0 0 4px 0;
+    color:black;
+    letter-spacing: normal;
+    font-weight: normal;
+    text-transform: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.result-bar {
+    height: 24px;
+    background-color: goldenrod;
+    transition: width 0.5s ease;
+}
+
+.write-in {
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 600px;
+    background-color: white;
+    border: 3px solid goldenrod;
+    font-family: Georgia, serif;
+}
+
+.write-in h4 {
+    color: goldenrod;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    text-align: center;
+    text-shadow: 1px 1px black;
+}
+
+.write-in form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.write-in input[type="text"] {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.write-in select {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.write-in button {
+    background-color: goldenrod;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.write-in button:hover {
+    background-color: darkviolet;
+    color: white;
+}
+
+.writein-confirmation {
+    margin-top: 16px;
+    text-align: center;
+    color: darkgreen;
+    font-style: italic;
+    font-size: 1rem;
 }
 
 /* footer */
