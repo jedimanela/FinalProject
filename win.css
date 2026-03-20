@@ -218,3 +218,40 @@ footer {
     color: goldenrod;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .navMenu {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navMenu button {
+        width: 100%;
+    }
+
+    .pictures {
+        grid-template-columns: 1fr;
+    }
+
+    .category {
+        grid-template-columns: 1fr;
+    }
+
+    .category-title {
+        border-bottom: 1px solid goldenrod;
+        padding-bottom: 8px;
+    }
+}
