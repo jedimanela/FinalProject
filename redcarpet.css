@@ -48,6 +48,11 @@ header {
     align-items: center;
     bottom:50px;
     text-decoration: none;
+
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: goldenrod;
+    text-transform: uppercase;
 }
 
 .navMenu {
@@ -70,8 +75,7 @@ header {
 .navMenu button {
     background-color: goldenrod;
     height: 60px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border:0;
 }
 
@@ -323,4 +327,5 @@ footer {
     grid-row: 4/4;
     background-color: black;
     color: goldenrod;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

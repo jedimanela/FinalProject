@@ -118,8 +118,8 @@ function showResults(category) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    showResults('women');
-    showResults('men');
+    if (document.getElementById('women-results')) showResults('women');
+    if (document.getElementById('men-results')) showResults('men');
 });
 
 function submitWriteIn(event) {
